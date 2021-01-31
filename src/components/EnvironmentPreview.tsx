@@ -29,7 +29,11 @@ const EnvironmentPreview: VFC<EnvironmentPreviewProps> = ({
           <>
             <Canvas>
               <Suspense fallback={null}>
-                <OrbitControls enableZoom={false} enablePan={false} />
+                <OrbitControls
+                  enableZoom={false}
+                  enablePan={false}
+                  {...({} as any)}
+                />
                 <Environment
                   // @ts-ignore
                   files={url}
@@ -37,7 +41,7 @@ const EnvironmentPreview: VFC<EnvironmentPreviewProps> = ({
                   background={true}
                 />
               </Suspense>
-              <TorusKnot>
+              <TorusKnot {...({} as any)}>
                 <meshStandardMaterial metalness={1} roughness={0} />
               </TorusKnot>
             </Canvas>

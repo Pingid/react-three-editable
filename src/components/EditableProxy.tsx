@@ -187,6 +187,7 @@ const EditableProxy: VFC<EditableProxyProps> = ({
                 }
               }}
               userData={{ helper: true }}
+              {...({} as any)}
             >
               <meshBasicMaterial visible={false} />
             </Sphere>
